@@ -5,7 +5,7 @@ const CurrentWeather = ({ currentWeather }) => {
      <div className="weather-container">
         <div className="current-weather">
             <div className="weather-icon">
-                <img src = {`src/icons/${currentWeather.weatherIcon}.svg`} />
+                <img src = {`/icons/${currentWeather.weatherIcon}.svg`} />
             </div>
             <h3 className="temprature">
                 {currentWeather.temp} <span>°C</span>
@@ -25,28 +25,28 @@ const CurrentWeather = ({ currentWeather }) => {
             </div>
             <div className="data-container">
                 <div className="element">
-                    <img src="src/assets/humidity.png" className="humidity" />
+                    <img src="/assets/humidity.png" className="humidity" />
                     <div className="data">
                         <span className="humi-per">{currentWeather.humidity}%</span>
                         <span className="humi-text">Humidity</span>
                     </div>
                 </div>
                 <div className="element">
-                    <img src="src/assets/sunrise.png" className="sunrise" />
+                    <img src="/assets/sunrise.png" className="sunrise" />
                     <div className="data">
                         <span className="rise-time">{currentWeather.sunrise}</span>
                         <span className="risei-text">Sunrise</span>
                     </div>
                 </div>
                 <div className="element">
-                    <img src="src/assets/sunset.png" className="sunset" />
+                    <img src="/assets/sunset.png" className="sunset" />
                     <div className="data">
                         <span className="rise-time">{currentWeather.sunset}</span>
                         <span className="rise-text">Sunset</span>
                     </div>
                 </div>
                 <div className="element">
-                    <img src="src/assets/wind.png" className="wind" />
+                    <img src="/assets/wind.png" className="wind" />
                     <div className="data">
                         <span className="wind-speed">{currentWeather.wind}km/h</span>
                         <span className="wind-text">Wind speed</span>

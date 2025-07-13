@@ -120,7 +120,7 @@ function App() {
             playsInline
             key={backgroundVideo}
           >
-            <source src={`src/assets/${backgroundVideo}.mp4`} type="video/mp4" />
+            <source src={`/assets/${backgroundVideo}.mp4`} type="video/mp4" />
           </video>
         )}
         <SearchSection ref={searchRef} getWeatherDetails={getWeatherDetails} locationSearch={handleLocationSearch}/>

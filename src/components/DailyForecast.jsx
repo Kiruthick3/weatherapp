@@ -32,7 +32,7 @@ const DailyForecast = ({ forecast }) => {
 
         return (
             <g transform={`translate(${x}, ${y - 55})`}>
-                <image href={`src/icons/${point.icon}.svg`} x={-12} y={0} height={24} width={24}/>
+                <image href={`/icons/${point.icon}.svg`} x={-12} y={0} height={24} width={24}/>
                 <text x={0} y={35} fill="#fff" fontSize={12} textAnchor="middle">
                     {Math.floor(point.temperature)}°C
                 </text>
@@ -60,7 +60,7 @@ const DailyForecast = ({ forecast }) => {
             >
               <p style={{ marginBottom: "4px" }}>{time}</p>
               <img
-                src={`src/icons/${icon}.svg`}
+                src={`/icons/${icon}.svg`}
                 alt="weather icon"
                 style={{ width: 24, height: 24, marginBottom: "4px" }}
               />
@@ -85,7 +85,7 @@ const DailyForecast = ({ forecast }) => {
                     return(
                         <li key={index} className="daily-item" onClick={() => handleDayClick(day.fullDay)}>
                             <p className="day">{days}</p>
-                            <img src={`src/icons/${day.icon}.svg`} alt={day.condition} className="daily-icon" />
+                            <img src={`/icons/${day.icon}.svg`} alt={day.condition} className="daily-icon" />
                             <p className="condition">{day.condition}</p>
                             <p className="temp">↑ {day.maxTemp}°C</p>
                             <p className="temp"> ↓ {day.minTemp}°C</p>
@@ -116,9 +116,9 @@ const DailyForecast = ({ forecast }) => {
                                 </LineChart>
                             </ResponsiveContainer>
                             <div className="chart-footer">
-                                <p><img src="src/assets/sunrise.png" className="sunrise" /> {astroData.sunrise} </p>
-                                <p><img src="src/assets/sunset.png" className="sunset" /> {astroData.sunset}</p>
-                                <p><img src="src/assets/moon.png" className="moonPhase" /> Moon phase: {astroData.moon_phase} </p>
+                                <p><img src="/assets/sunrise.png" className="sunrise" /> {astroData.sunrise} </p>
+                                <p><img src="/assets/sunset.png" className="sunset" /> {astroData.sunset}</p>
+                                <p><img src="/assets/moon.png" className="moonPhase" /> Moon phase: {astroData.moon_phase} </p>
                             </div>
                         </div>
                     </div>

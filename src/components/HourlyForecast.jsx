@@ -15,7 +15,7 @@ const HourlyForecast = ({hourlyWeather}) => {
           return(
           <li className="weather-item" key = {index}>
             <p className="time">{time}</p>
-            <img src={`src/icons/${weatherIcon}.svg`}  className="hourly-weatherIcon" />
+            <img src={`/icons/${weatherIcon}.svg`}  className="hourly-weatherIcon" />
             <p className="condition">{condition}</p>
             <p className="temp">{hourlyWeather.temp_c}°c</p>
           </li>)})
