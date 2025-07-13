@@ -1,5 +1,5 @@
 import  { useState, useEffect, useRef } from 'react'
-import './assets/app.css'
+import './app.css'
 import SearchSection from './components/SearchSection';
 import CurrentWeather from './components/CurrentWeather';
 import HourlyForecast from './components/HourlyForecast';
