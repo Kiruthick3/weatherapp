@@ -18,7 +18,7 @@ const SearchSection = forwardRef(({getWeatherDetails, locationSearch},ref) => {
   }));
 
   const handleSearch= async() =>{
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${text}&days=10`;
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${text}&days=10`;
     getWeatherDetails(url);
     setHoveredText("");
     setCitySuggestion([]);
@@ -38,8 +38,7 @@ const SearchSection = forwardRef(({getWeatherDetails, locationSearch},ref) => {
     debounceTimer.current = setTimeout( async () =>{
       if (searchInput.length > 2){
         try{
-          const suggestionUrl = `http://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${searchInput}`
-
+          const suggestionUrl = `https://api.weatherapi.com/v1/search.json?key=${API_KEY}&q=${searchInput}`
           const res = await fetch(suggestionUrl);
           const data = await res.json();
           console.log(data);
@@ -75,7 +74,7 @@ const SearchSection = forwardRef(({getWeatherDetails, locationSearch},ref) => {
       if (citySuggestion.length && selectedIndex >= 0) {
         const selectedCity = citySuggestion[selectedIndex];
         setText(selectedCity.name);
-        const url = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${selectedCity.name}&days=10`;
+        const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${selectedCity.name}&days=10`;
         getWeatherDetails(url);
         setCitySuggestion([]);
         setHoveredText("");
@@ -98,7 +97,7 @@ const SearchSection = forwardRef(({getWeatherDetails, locationSearch},ref) => {
   const handleSelectSuggestion = (city) =>{
     setText(city.name);
     setCitySuggestion([]);
-    const url = `http://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city.name}&days=10`;
+    const url = `https://api.weatherapi.com/v1/forecast.json?key=${API_KEY}&q=${city.name}&days=10`;
     getWeatherDetails(url);
     setText("");
     setHoveredText('');
